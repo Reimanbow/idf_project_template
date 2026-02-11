@@ -60,3 +60,7 @@ fullclean:
 # メモリ使用量の確認
 size:
     {{DOCKER_RUN}} {{IMAGE}} idf.py size
+
+# コードフォーマット (要: clang-format)
+fmt:
+    find main components -name '*.c' -o -name '*.h' | xargs clang-format -i

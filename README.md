@@ -25,6 +25,7 @@ just init chip=esp32s3
 - [just](https://github.com/casey/just)
 - [esptool](https://github.com/espressif/esptool) (`pip install esptool`) - 書き込み用
 - [pyserial](https://pypi.org/project/pyserial/) (`pip install pyserial`) - モニター用
+- clang-format (`sudo pacman -S clang`) - コードフォーマット用
 
 ## クイックスタート
 
