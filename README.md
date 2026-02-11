@@ -64,6 +64,7 @@ just run
 | `just clean` | ビルド成果物を削除 |
 | `just fullclean` | ビルドディレクトリ全体を削除 |
 | `just size` | メモリ使用量の確認 |
+| `just fmt` | コードフォーマット (clang-format) |
 
 ## オプション引数
 
@@ -93,6 +94,10 @@ echo 'IDF_VERSION=v5.3' > .env
 VS Code の **Dev Containers** 拡張をインストールし、コマンドパレットから `Dev Containers: Reopen in Container` を実行するとコンテナ内で VS Code が開きます。ESP-IDF のヘッダーが全て解決され、補完・定義ジャンプ・エラー表示が有効になります。
 
 ビルド・書き込み・モニターはホスト側のターミナルで `just` を使ってください。
+
+## CI (GitHub Actions)
+
+push / pull request 時にビルドとフォーマットチェックが自動実行されます。`.github/workflows/build.yml` の先頭にある `IDF_TARGET` と `IDF_VERSION` をプロジェクトに合わせて変更してください。
 
 ## プロジェクト構成
 
